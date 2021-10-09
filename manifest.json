@@ -1,0 +1,37 @@
+{
+  "manifest_version": 2,
+  "name": "Toggle dark mode",
+  "short_name": "toggle-dark-mode",
+  "version": "1.0.0",
+  "author": "Cimbali",
+  "homepage_url": "https://github.com/Cimbali/toggle-dark-mode",
+  "description": "Toggle the content’s color scheme between preferring light or dark",
+  "icons": {
+    "48": "icons/system_48x48.png",
+    "96": "icons/system_96x96.png"
+  },
+  "browser_action": {
+    "browser_style": true,
+    "default_icon": {
+      "48": "icons/system_48x48.png",
+      "96": "icons/system_96x96.png"
+    },
+    "default_title": "Toggle dark/light/system schemes"
+  },
+  "permissions": [
+    "storage",
+    "browserSettings"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "options_ui": {
+    "page": "/options.html",
+    "browser_style": true
+  },
+  "applications": {
+    "gecko": {
+      "id": "toggle-dark-schemes@Cimbali.github.com"
+    }
+  }
+}
