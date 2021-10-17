@@ -6,16 +6,20 @@
 
 This is the simplest possible add-on with the least possible permissions.
 
-Clicking the add-on action in your toolbar cycles the color scheme preference _for browser content_, between the following 3 values:
+Clicking the add-on action in your toolbar cycles the color scheme preference _for browser content_, between the following 4 values:
 1. dark colors
 2. light colors
-3. inherit system colors (dark or light) − disabled by default but can be enabled in the add-on options
+3. inherit browser colors (dark or light)
+4. inherit system colors (dark or light)
+
+You can enable or disable values in the cycle from the add-on content.
 
 ## Website support
 
-This add-on relies on the fact that websites have their own proper stylesheets for dark and light modes. This is now the case for an increasing number of websites: google, duckduckgo, github, stackoverflow, and many more.
+This add-on relies on the fact that websites have their own proper stylesheets for dark and light modes, for example [DuckDuckGo](https://duckduckgo.com/).<br>
+An increasing number of websites now offer light and dark schemes, though you may need to select a specific option to inherit your browser’s colors, e.g. google, github, stackoverflow, and many more.
 
-If you want to add your own dark mode to websites, you can use user style sheet addons such as e.g. Stylus. Then you can wrap the CSS in a [`prefers-color-scheme` media feature](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) so it responds to this add-on’s toggle. For example:
+If you want to add your own dark mode to other websites, you can use user style sheet addons such as e.g. Stylus. Then you can wrap the CSS in a [`prefers-color-scheme` media feature](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) so it responds to this add-on’s toggle. For example:
 
 ```css
 @media (prefers-color-scheme: dark) {

@@ -8,14 +8,29 @@
 body {
 	padding: 30px;
 }
+label {
+	display: block;
+}
+ul {
+	margin: 0;
+	list-style-type: none;
+}
+.error {
+	font-weight: bold;
+	color: darkred;
+}
 </style>
 </head>
 
 <body>
-	<p>
-		<input type="checkbox" id="include_system" name="include_system">
-		<label for="include_system">Include <em>system</em> scheme when cycling (dark-light-system instead of dark-light)</label>
-	</p>
+	<p>Choose between which values to cycle:</p>
+	<ul>
+		<li><label><input type="checkbox" name="dark">Forced <em>dark</em></label></li>
+		<li><label><input type="checkbox" name="light">Forced <em>light</em> scheme</label></li>
+		<li><label><input type="checkbox" name="system">Inherit <em>system</em> scheme</label></li>
+		<li><label><input type="checkbox" name="browser">Include <em>browser</em> scheme</label></li>
+	</ul>
+	<p class="error" id="more-values-needed" style="display: none;">Settings not saved: at least 2 values are needed to cycle.</p>
 
 	<script type="text/javascript" src="/options.js"></script>
 </body>
