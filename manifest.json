@@ -31,7 +31,7 @@
   },
   "applications": {
     "gecko": {
-      "id": "toggle-dark-schemes@Cimbali.github.com"
+      "id": "toggle-dark-mode@Cimbali.github.com"
     }
   }
 }
