@@ -2,6 +2,8 @@
 
 # Toggle color schemes! [![Mozilla Add-on](https://img.shields.io/amo/v/toggle-dark-mode)](https://addons.mozilla.org/en-US/firefox/addon/toggle-dark-mode/)
 
+**For Firefox version > 95.**
+
 ## Minimal add-on
 
 This is the simplest possible add-on with the least possible permissions.
