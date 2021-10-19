@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Toggle dark mode",
   "short_name": "toggle-dark-mode",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Cimbali",
   "homepage_url": "https://github.com/Cimbali/toggle-dark-mode",
   "description": "Toggle the content’s color scheme between preferring light or dark",
