@@ -14,9 +14,7 @@ const color_schemes = [
 var selected_scheme = -1;
 
 // We need detection for system color scheme
-function detectDarkScheme() {
-	return window.matchMedia("(prefers-color-scheme: dark)").matches;
-}
+let detectDarkScheme = () => window.matchMedia("(prefers-color-scheme: dark)").matches;
 
 function updatePrefs({ include }) {
 	const value = color_schemes[selected_scheme]
