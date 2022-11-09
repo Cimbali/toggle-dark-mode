@@ -37,6 +37,6 @@ If you want to add your own dark mode to other websites, you can use user style 
 
 ## Links
 
-https://addons.mozilla.org/en-US/firefox/addon/toggle-dark-scheme/
+https://addons.mozilla.org/en-US/firefox/addon/toggle-dark-mode/
 
 Sun, Moon, and Solar Eclipse icons by [MarkieAnn Packer from the Noun Project](https://thenounproject.com/MarkieAnn) (under CCBY2.0).
