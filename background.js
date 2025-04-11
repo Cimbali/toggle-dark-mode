@@ -38,17 +38,30 @@ function setBadge() {
 }
 
 function updateScheme({ value }) {
-	// determine a guess for where we are in the list and update the badge.
-	// if the value is in the list, EZ
-	selected_scheme = color_schemes.indexOf(value);
+	// Check whether we are where we expect to be in the color schemes list
+	if (selected_scheme < color_schemes.length) {
+		const current = color_schemes[selected_scheme];
+		if (current === value || ['browser', 'system'].includes(current) && current === 'auto') {
+			setBadge();
+			return
+		}
+	}
+	// Otherwise, determine a guess for where we are in the list and update the badge.
+	// If the value is in the list, EZ
+	if (color_schemes.includes(value)) {
+		selected_scheme = color_schemes.indexOf(value);
+	}
+	// the scheme is 'auto' so pick one that is available
+	else if (value === 'auto' && color_schemes.includes('system')) {
+		selected_scheme = color_schemes.indexOf('system');
+	}
+	else if (value === 'auto' && color_schemes.includes('browser')) {
+		selected_scheme = color_schemes.indexOf('browser');
+	}
 	// fall back to the correct basic color scheme, as that’s all we can smartly detect
 	if (selected_scheme < 0) {
 		const basic = detectDarkScheme() ? "dark" : "light";
 		selected_scheme = color_schemes.indexOf(basic);
-	}
-	// the scheme is not in the list, and we want an inherited scheme, so take the other one
-	if (selected_scheme < 0) {
-		selected_scheme = color_schemes.indexOf(color_schemes.includes('browser') ? 'browser' : 'system');
 	}
 	// this should never happen
 	if (selected_scheme < 0) {
